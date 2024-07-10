@@ -1,0 +1,23 @@
+spring:
+    application:
+        name: stage_2
+    datasource:
+        url: 
+            jdbc:postgresql://monorail.proxy.rlwy.net:58861/railway
+        username: postgres
+        password: sydxcnKTKkCXqyKXRSjXCatSSqYuxjVa
+        driver-class-name: org.postgresql.Driver
+    jpa: 
+        hibernate: 
+            ddl-auto: update
+        show-sql: true
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.PostgreSQLDialect
+                "[format_sql]": true
+        database: postgresql
+        database-platform: org.hibernate.dialect.PostgreSQL16Dialect
+    # jwt_secret_key: c8c939284e5d48a18eb93e7f67008c031ada01d5f25bf70a04071e0d7134914a
+        
+server:
+    port: 8000
