@@ -22,7 +22,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class APIController {
     private final APIService apiService;
-    @GetMapping("/user/{userId}")
+    @GetMapping("/users/{userId}")
     public ResponseEntity<?> getUserProfile(@PathVariable String userId) {
         return apiService.getUserProfile(userId);
     }
