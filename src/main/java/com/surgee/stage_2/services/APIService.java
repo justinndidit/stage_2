@@ -144,7 +144,7 @@ public class APIService {
              if(!organizationOptional.isPresent()) {
                  responseStatus = HttpStatus.NOT_FOUND;
                  status = responseStatus.getReasonPhrase();
-                 throw new IllegalStateException("NO organization with id " + orgId );
+                 throw new IllegalStateException("NO organisation with id " + orgId );
              }
  
              Organization organisation = organizationOptional.get();
@@ -237,7 +237,7 @@ public class APIService {
             if(!organizationOptional.isPresent()){
                 responseStatus = HttpStatus.NOT_FOUND;
                 status = responseStatus.getReasonPhrase();
-                throw new IllegalStateException("Specified Organization not found.");
+                throw new IllegalStateException("Specified Organisation not found.");
 
             }
 
@@ -276,7 +276,7 @@ public class APIService {
              
              HttpSuccessDTO successResponse = HttpSuccessDTO.builder()
                                                      .status(status)
-                                                     .message("User added to Organization successfully")
+                                                     .message("User added to Organisation successfully")
                                                      .build();
              HttpResponse response=  HttpResponse.builder()
                                                  .response(successResponse)

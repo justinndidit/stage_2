@@ -44,7 +44,6 @@ public class AuthSpec {
     private ObjectMapper objectMapper;
 
     private User user;
-    private Organization org;
 
     @BeforeEach
     public void setUp() {

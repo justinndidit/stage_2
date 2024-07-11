@@ -59,13 +59,13 @@ public class AuthService {
             role = role == null ? Role.USER : role;
             final String orgId = idGenerator.generateId();
             final String userId = idGenerator.generateId();
-            String organizationName = firstName + "'s Organization";
+            String organizationName = firstName + "'s Organisation";
             log.info("Creating organization with name: {}", organizationName);
 
             Organization organization = Organization.builder()
                                                     .orgId(orgId)
                                                     .name(organizationName)
-                                                    .description(firstName + "'s new organization")
+                                                    .description(firstName + "'s new organisation")
                                                     .build();
 
             User user = User.builder()
